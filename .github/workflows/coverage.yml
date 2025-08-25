@@ -31,8 +31,7 @@ jobs:
         
     - name: Upload coverage reports to Datadog
       run: |
-        cd toy_calculator
-        npx @datadog/datadog-ci coverage upload .
+        datadog-ci coverage upload .
       env:
         DD_API_KEY: ${{ secrets.DD_API_KEY }}
         DD_SITE: dd.datad0g.com 
