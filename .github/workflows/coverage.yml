@@ -36,4 +36,4 @@ jobs:
         npx @datadog/datadog-ci coverage upload .
       env:
         DD_API_KEY: ${{ secrets.DD_API_KEY }}
-        DD_SITE: dd.datad0g.com 
+        DD_SITE: datad0g.com 
