@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 
 def add(a, b):
     """Add two numbers."""
@@ -29,3 +30,10 @@ def increment(a):
 def decrement(a):
     """Decrement a number by 1."""
     return a - 1
+
+
+def square_root(a):
+    """Calculate the square root of a number."""
+    if a < 0:
+        raise ValueError("Cannot calculate square root of negative number")
+    return math.sqrt(a)
