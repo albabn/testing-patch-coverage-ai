@@ -2,12 +2,14 @@ name: Test and Upload Coverage
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '**'
   pull_request:
     branches: [ main ]
 
 jobs:
-  test-and-upload:
+  test:
+    runs-on: ubuntu-latest
     
     steps:
     - name: Checkout code
@@ -20,7 +22,6 @@ jobs:
         
     - name: Install dependencies
       run: |
-        cd toy_calculator
         pip install -r requirements.txt
         
     - name: Run tests with coverage
