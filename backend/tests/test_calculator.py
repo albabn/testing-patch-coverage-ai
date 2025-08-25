@@ -1,5 +1,11 @@
 import pytest
-from calculator import add, subtract, multiply, divide
+import sys
+import os
+
+# Add the src directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+from core.calculator import add, subtract, multiply, divide
 
 
 def test_add():

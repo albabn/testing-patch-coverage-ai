@@ -205,6 +205,9 @@ class TestTaskManager:
     
     def test_search_tasks(self):
         """Test task search functionality."""
+        # Clear existing tasks for this test
+        self.tm.tasks.clear()
+        
         self.tm.create_task("Searchable Task", "This is searchable", self.project_id, self.user1_id)
         self.tm.create_task("Another Task", "Not searchable", self.project_id, self.user2_id)
         
