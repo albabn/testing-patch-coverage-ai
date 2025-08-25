@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import math
 
 
@@ -20,4 +21,24 @@ def power(a, b):
 
 def cube(a):
     """Calculate the cube of a number."""
-    return a ** 3 
+    return a ** 3
+
+
+if __name__ == "__main__":
+    # Example usage when run as script
+    print("🚀 Advanced Math Demo")
+    print("=" * 30)
+    
+    # Test basic operations
+    print(f"5² = {square(5)}")
+    print(f"√16 = {square_root(16)}")
+    print(f"2³ = {cube(2)}")
+    print(f"3⁴ = {power(3, 4)}")
+    
+    # Test error handling
+    try:
+        result = square_root(-4)
+    except ValueError as e:
+        print(f"Error: {e}")
+    
+    print("\n✨ Advanced math functions are ready to use!") 
