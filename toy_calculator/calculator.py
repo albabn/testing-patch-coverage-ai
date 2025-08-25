@@ -29,3 +29,8 @@ def increment(a):
 def decrement(a):
     """Decrement a number by 1."""
     return a - 1
+
+
+def power(a, b):
+    """Calculate a raised to the power of b."""
+    return a ** b
