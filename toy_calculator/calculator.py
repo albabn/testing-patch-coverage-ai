@@ -21,22 +21,11 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 
+def increment(a):
+    """Increment a number by 1."""
+    return a + 1
 
-if __name__ == "__main__":
-    # Example usage when run as script
-    print("🧮 Calculator Demo")
-    print("=" * 30)
-    
-    # Test basic operations
-    print(f"5 + 3 = {add(5, 3)}")
-    print(f"10 - 4 = {subtract(10, 4)}")
-    print(f"6 × 7 = {multiply(6, 7)}")
-    print(f"15 ÷ 3 = {divide(15, 3)}")
-    
-    # Test error handling
-    try:
-        result = divide(10, 0)
-    except ValueError as e:
-        print(f"Error: {e}")
-    
-    print("\n✨ Calculator functions are ready to use!") 
+
+def decrement(a):
+    """Decrement a number by 1."""
+    return a - 1
