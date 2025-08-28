@@ -1,5 +1,5 @@
 import pytest
-from calculator import add, subtract
+from calculator import add, divide, multiply, subtract
 
 
 def test_add():
@@ -16,4 +16,22 @@ def test_subtract():
     assert subtract(1, 1) == 0
     assert subtract(0, 5) == -5
     assert subtract(3.5, 1.5) == 2.0
+
+def test_multiply():
+    """Test the multiply function."""
+    assert multiply(2, 3) == 6
+    assert multiply(-1, 5) == -5
+    assert multiply(0, 10) == 0
+
+
+def test_divide():
+    """Test the divide function for normal division."""
+    assert divide(10, 2) == 5
+    assert divide(7.5, 2.5) == 3
+
+
+def test_divide_by_zero():
+    """Test that dividing by zero raises a ValueError."""
+    with pytest.raises(ValueError, match="Cannot divide by zero"):
+        divide(1, 0)
 
