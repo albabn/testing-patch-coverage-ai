@@ -10,3 +10,21 @@ def subtract(a, b):
     return a - b
 
 
+def multiply(a, b):
+    """Multiply two numbers."""
+    return a * b
+
+
+def divide(a, b):
+    """Divide a by b."""
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+
+def modulo(a, b):
+    """Calculate the remainder when a is divided by b."""
+    if b == 0:
+        raise ValueError("Cannot calculate modulo with zero")
+    return a % b
+
