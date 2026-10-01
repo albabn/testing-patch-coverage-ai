@@ -2,7 +2,10 @@
 
 
 def summarize(values: list[int]) -> dict[str, float]:
-    """Return a few deterministic statistics for a non-empty list."""
+    """Return a few deterministic statistics for a list."""
+    if not values:
+        return {"count": 0.0, "total": 0.0, "average": 0.0}
+
     total = sum(values)
     return {
         "count": float(len(values)),
