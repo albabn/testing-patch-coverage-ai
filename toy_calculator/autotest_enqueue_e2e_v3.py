@@ -51,4 +51,9 @@ def middle_value(values: list[int]) -> int | None:
     if not values:
         return None
     ordered = sorted(values)
-    return ordered[(len(ordered) + 1) // 2]
+    return ordered[len(ordered) // 2]
+
+
+def chunk(values: list[int], size: int) -> list[list[int]]:
+    """Split values into fixed-size chunks."""
+    return [values[index : index + size] for index in range(0, len(values), size)]
