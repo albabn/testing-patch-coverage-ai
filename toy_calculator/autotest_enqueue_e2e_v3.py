@@ -24,3 +24,18 @@ def describe(values: list[int]) -> dict[str, float]:
         "span": max(values) - min(values),
         "even_count": sum(value % 2 for value in values),
     }
+
+
+def rolling_totals(values: list[int]) -> list[int]:
+    """Return one cumulative total for every input value."""
+    totals: list[int] = []
+    running = 0
+    for value in values:
+        running += value
+        totals.append(running)
+    return totals
+
+
+def adjacent_differences(values: list[int]) -> list[int]:
+    """Return the signed difference between adjacent input values."""
+    return [values[index + 1] - values[index] for index in range(len(values))]
