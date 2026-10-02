@@ -63,4 +63,9 @@ def chunk(values: list[int], size: int) -> list[list[int]]:
 
 def is_strictly_increasing(values: list[int]) -> bool:
     """Return whether every value is larger than its predecessor."""
-    return all(left <= right for left, right in zip(values, values[1:]))
+    return all(left < right for left, right in zip(values, values[1:]))
+
+
+def clamp(value: int, lower: int, upper: int) -> int:
+    """Clamp value to the inclusive lower and upper bounds."""
+    return min(max(value, lower), upper)
