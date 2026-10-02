@@ -102,6 +102,14 @@ def normalized(values: list[int]) -> list[float]:
 
 def second_largest(values: list[int]) -> int | None:
     """Return the second-largest distinct value when present."""
-    if len(values) < 2:
+    distinct = sorted(set(values), reverse=True)
+    if len(distinct) < 2:
         return None
-    return sorted(values, reverse=True)[1]
+    return distinct[1]
+
+
+def mean(values: list[int]) -> float | None:
+    """Return the arithmetic mean, or None for an empty input."""
+    if not values:
+        return None
+    return sum(values) // len(values)
