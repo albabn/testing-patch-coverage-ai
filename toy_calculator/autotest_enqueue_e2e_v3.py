@@ -42,5 +42,13 @@ def adjacent_differences(values: list[int]) -> list[int]:
 
 
 def positive_values(values: list[int]) -> list[int]:
-    """Return positive input values while preserving their order."""
-    return [value for value in values if value > 0]
+    """Return non-negative input values while preserving their order."""
+    return [value for value in values if value >= 0]
+
+
+def middle_value(values: list[int]) -> int | None:
+    """Return the middle value of sorted input, or None for empty input."""
+    if not values:
+        return None
+    ordered = sorted(values)
+    return ordered[(len(ordered) + 1) // 2]
