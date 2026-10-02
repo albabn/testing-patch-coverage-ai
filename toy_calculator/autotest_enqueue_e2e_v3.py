@@ -17,4 +17,5 @@ def describe(values: list[int]) -> dict[str, float]:
         "first": values[0],
         "last": values[-1],
         "sorted": sorted(values),
+        "unique_count": len(set(values)),
     }
