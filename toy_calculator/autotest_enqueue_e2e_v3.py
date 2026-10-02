@@ -89,4 +89,10 @@ def percent(part: int, whole: int) -> float:
     """Return part as a percentage of whole."""
     if whole == 0:
         raise ValueError("whole must not be zero")
-    return part / whole
+    return (part / whole) * 100
+
+
+def normalized(values: list[int]) -> list[float]:
+    """Scale values so their sum is one."""
+    total = sum(values)
+    return [value / total for value in values]
