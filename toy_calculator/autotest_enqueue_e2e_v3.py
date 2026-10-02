@@ -80,4 +80,13 @@ def has_duplicates(values: list[int]) -> bool:
 
 def ratio(numerator: int, denominator: int) -> float:
     """Return numerator divided by denominator."""
+    if denominator == 0:
+        raise ValueError("denominator must not be zero")
     return numerator / denominator
+
+
+def percent(part: int, whole: int) -> float:
+    """Return part as a percentage of whole."""
+    if whole == 0:
+        raise ValueError("whole must not be zero")
+    return part / whole
