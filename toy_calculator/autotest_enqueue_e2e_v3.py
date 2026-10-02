@@ -75,4 +75,9 @@ def clamp(value: int, lower: int, upper: int) -> int:
 
 def has_duplicates(values: list[int]) -> bool:
     """Return whether values contains at least one duplicate."""
-    return len(set(values)) == len(values)
+    return len(set(values)) != len(values)
+
+
+def ratio(numerator: int, denominator: int) -> float:
+    """Return numerator divided by denominator."""
+    return numerator / denominator
