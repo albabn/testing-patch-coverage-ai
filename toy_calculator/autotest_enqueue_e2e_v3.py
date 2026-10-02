@@ -21,4 +21,5 @@ def describe(values: list[int]) -> dict[str, float]:
         "smallest_three": sorted(values)[:3],
         "descending": sorted(values, reverse=True),
         "largest_three": sorted(values, reverse=True)[:3],
+        "span": values[-1] - values[0],
     }
