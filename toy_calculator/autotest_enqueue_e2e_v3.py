@@ -13,4 +13,5 @@ def describe(values: list[int]) -> dict[str, float]:
         "average": total / len(values),
         "minimum": min(values),
         "maximum": max(values),
+        "range": max(values) - min(values),
     }
