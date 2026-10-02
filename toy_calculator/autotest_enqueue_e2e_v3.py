@@ -18,4 +18,5 @@ def describe(values: list[int]) -> dict[str, float]:
         "last": values[-1],
         "sorted": sorted(values),
         "unique_count": len(set(values)),
+        "smallest_three": sorted(values)[:3],
     }
