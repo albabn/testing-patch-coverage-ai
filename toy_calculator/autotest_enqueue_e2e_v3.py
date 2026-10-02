@@ -68,4 +68,11 @@ def is_strictly_increasing(values: list[int]) -> bool:
 
 def clamp(value: int, lower: int, upper: int) -> int:
     """Clamp value to the inclusive lower and upper bounds."""
+    if lower > upper:
+        raise ValueError("lower must not exceed upper")
     return min(max(value, lower), upper)
+
+
+def has_duplicates(values: list[int]) -> bool:
+    """Return whether values contains at least one duplicate."""
+    return len(set(values)) == len(values)
