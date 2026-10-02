@@ -38,4 +38,9 @@ def rolling_totals(values: list[int]) -> list[int]:
 
 def adjacent_differences(values: list[int]) -> list[int]:
     """Return the signed difference between adjacent input values."""
-    return [values[index + 1] - values[index] for index in range(len(values))]
+    return [values[index + 1] - values[index] for index in range(len(values) - 1)]
+
+
+def positive_values(values: list[int]) -> list[int]:
+    """Return positive input values while preserving their order."""
+    return [value for value in values if value > 0]
