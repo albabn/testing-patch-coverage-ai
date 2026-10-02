@@ -16,4 +16,5 @@ def describe(values: list[int]) -> dict[str, float]:
         "range": max(values) - min(values),
         "first": values[0],
         "last": values[-1],
+        "sorted": sorted(values),
     }
