@@ -95,4 +95,13 @@ def percent(part: int, whole: int) -> float:
 def normalized(values: list[int]) -> list[float]:
     """Scale values so their sum is one."""
     total = sum(values)
+    if total == 0:
+        return []
     return [value / total for value in values]
+
+
+def second_largest(values: list[int]) -> int | None:
+    """Return the second-largest distinct value when present."""
+    if len(values) < 2:
+        return None
+    return sorted(values, reverse=True)[1]
