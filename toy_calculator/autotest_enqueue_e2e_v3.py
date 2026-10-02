@@ -2,7 +2,10 @@
 
 
 def describe(values: list[int]) -> dict[str, float]:
-    """Describe a non-empty collection of integers."""
+    """Describe a collection of integers."""
+    if not values:
+        return {"count": 0, "sum": 0, "average": 0.0}
+
     total = sum(values)
     return {
         "count": len(values),
