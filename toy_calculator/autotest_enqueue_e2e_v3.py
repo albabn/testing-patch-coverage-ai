@@ -56,4 +56,11 @@ def middle_value(values: list[int]) -> int | None:
 
 def chunk(values: list[int], size: int) -> list[list[int]]:
     """Split values into fixed-size chunks."""
+    if size <= 0:
+        raise ValueError("size must be positive")
     return [values[index : index + size] for index in range(0, len(values), size)]
+
+
+def is_strictly_increasing(values: list[int]) -> bool:
+    """Return whether every value is larger than its predecessor."""
+    return all(left <= right for left, right in zip(values, values[1:]))
